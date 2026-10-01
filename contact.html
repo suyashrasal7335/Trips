@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Hill Station</title>
+    <title>Contact Us - MyTravel</title>
 
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="contact">
     <!-- Navigation Bar -->
-    <nav class="navbar"></nav>
+    <div id="Nav-header">
+      <script>
+        fetch("Navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("Nav-header").innerHTML = data;
+          });
+      </script>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact-section">
       <div class="contact-info">
         <h1>Contact Us</h1>
-        <p>
-          Have questions about our hill station packages? Feel free to contact
-          us.
-        </p>
+        <p>Have questions about MyTravel ? Feel free to contact us.</p>
 
         <div class="info-box">
           <h3>📍 Address</h3>
@@ -27,12 +32,12 @@
 
         <div class="info-box">
           <h3>📞 Phone</h3>
-          <p>+91 9373889047</p>
+          <p>+91 XXXXXXXXXX</p>
         </div>
 
         <div class="info-box">
           <h3>📧 Email</h3>
-          <p>suyashrasal7335@gmail.com</p>
+          <p>ABC@gmail.com</p>
         </div>
       </div>
 
@@ -63,8 +68,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>© 2026 TRAVEL DARJEELING. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

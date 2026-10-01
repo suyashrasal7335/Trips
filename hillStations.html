@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Hill Stations</title>
-    <link rel="stylesheet" href="hillStation.css" />
+    <title>MyTravel ... Explore Hill Stations</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="hillStation">
     <!-- Header -->
-    <header>
-      <h1>🏔️ Explore Hill Stations of India</h1>
-      <p>Discover beautiful mountains, valleys, waterfalls and nature</p>
-    </header>
-
+    <!-- <header class="HS-header"></header> -->
+    <div id="Nav-header">
+      <script>
+        fetch("Navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("Nav-header").innerHTML = data;
+          });
+      </script>
+    </div>
     <hr />
 
     <!-- Home -->
@@ -25,14 +30,12 @@
         green valleys, waterfalls, forests and pleasant weather.
       </p>
 
-      <img
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      <!-- <img
+        src="Assest/hiilStation1.jpg"
         alt="Beautiful Mountains"
         width="700"
-      />
+      /> -->
     </section>
-
-    <hr />
 
     <!-- Hill Stations -->
     <section id="hillstations">
@@ -42,11 +45,7 @@
       <article>
         <h3>1. Munnar, Kerala</h3>
 
-        <img
-          src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2"
-          alt="Munnar"
-          width="400"
-        />
+        <img src="Assest/Munnar1.jpg" alt="Munnar" width="400" />
 
         <p>
           Munnar is a beautiful hill station in Kerala. It is famous for its tea
@@ -69,11 +68,7 @@
       <article>
         <h3>2. Manali, Himachal Pradesh</h3>
 
-        <img
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
-          alt="Manali Mountains"
-          width="400"
-        />
+        <img src="Assest/Manali1.jpg" alt="Manali Mountains" width="400" />
 
         <p>
           Manali is a popular hill station in Himachal Pradesh. It is surrounded
@@ -96,11 +91,7 @@
       <article>
         <h3>3. Shimla, Himachal Pradesh</h3>
 
-        <img
-          src="https://images.unsplash.com/photo-1597074866923-dc0589150358"
-          alt="Shimla"
-          width="400"
-        />
+        <img src="Assest/Shimla1.jpg" alt="Shimla" width="400" />
 
         <p>
           Shimla is the capital of Himachal Pradesh and one of India's famous
@@ -123,11 +114,7 @@
       <article>
         <h3>4. Ooty, Tamil Nadu</h3>
 
-        <img
-          src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd"
-          alt="Ooty"
-          width="400"
-        />
+        <img src="Assest/Ooty1.jpg" alt="Ooty" width="400" />
 
         <p>
           Ooty is a beautiful hill station in Tamil Nadu. It is known for its
@@ -150,11 +137,7 @@
       <article>
         <h3>5. Mahabaleshwar, Maharashtra</h3>
 
-        <img
-          src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23"
-          alt="Mahabaleshwar"
-          width="400"
-        />
+        <img src="Assest/Mahabaleshwar1.jpg" alt="Mahabaleshwar" width="400" />
 
         <p>
           Mahabaleshwar is a popular hill station in Maharashtra. It is famous
@@ -177,11 +160,7 @@
       <article>
         <h3>6. Darjeeling, West Bengal</h3>
 
-        <img
-          src="https://wallpaperaccess.com/full/4136696.jpg"
-          alt="Darjeeling"
-          width="400"
-        />
+        <img src="Assest/Darjling1.jpg" alt="Darjeeling" width="400" />
 
         <p>
           Darjeeling is a famous hill station in West Bengal. It is well known
@@ -219,5 +198,16 @@
         <li>Trekking and adventure activities</li>
       </ul>
     </section>
+
+    <!-- footer -->
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

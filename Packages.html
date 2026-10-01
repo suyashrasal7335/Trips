@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Hill Station Packages</title>
+    <title>MyTravel Packages</title>
 
-    <link rel="stylesheet" href="package.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="package">
+    <div id="Nav-header">
+      <script>
+        fetch("Navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("Nav-header").innerHTML = data;
+          });
+      </script>
+    </div>
     <!-- Header -->
-    <header>
-      <h1>🏔️ Hill Station Packages</h1>
-      <p>Choose your perfect mountain holiday package</p>
+    <header id="p-header">
+      <p>MyTravel Packages Choose your perfect mountain holiday package</p>
     </header>
 
     <!-- Packages Section -->
@@ -23,10 +31,7 @@
       <div class="package-container">
         <!-- Munnar -->
         <div class="package-card">
-          <img
-            src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2"
-            alt="Munnar"
-          />
+          <img src="Assest/Munnar1.jpg" alt="Munnar" />
 
           <div class="package-content">
             <h3>🌿 Munnar Package</h3>
@@ -53,10 +58,7 @@
 
         <!-- Manali -->
         <div class="package-card">
-          <img
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
-            alt="Manali"
-          />
+          <img src="Assest/Manali1.jpg" alt="Manali" />
 
           <div class="package-content">
             <h3>🏔️ Manali Package</h3>
@@ -83,10 +85,7 @@
 
         <!-- Shimla -->
         <div class="package-card">
-          <img
-            src="https://images.unsplash.com/photo-1597074866923-dc0589150358"
-            alt="Shimla"
-          />
+          <img src="Assest/Shimla1.jpg" alt="Shimla" />
 
           <div class="package-content">
             <h3>🏔️ Shimla Package</h3>
@@ -113,10 +112,7 @@
 
         <!-- Ooty -->
         <div class="package-card">
-          <img
-            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd"
-            alt="Ooty"
-          />
+          <img src="Assest/Ooty1.jpg" alt="Ooty" />
 
           <div class="package-content">
             <h3>🌸 Ooty Package</h3>
@@ -143,10 +139,7 @@
 
         <!-- Mahabaleshwar -->
         <div class="package-card">
-          <img
-            src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23"
-            alt="Mahabaleshwar"
-          />
+          <img src="Assest/Mahabaleshwar1.jpg" alt="Mahabaleshwar" />
 
           <div class="package-content">
             <h3>🍓 Mahabaleshwar Package</h3>
@@ -173,10 +166,7 @@
 
         <!-- Darjeeling -->
         <div class="package-card">
-          <img
-            src="https://wallpaperaccess.com/full/4136696.jpg"
-            alt="Darjeeling"
-          />
+          <img src="Assest/Darjling1.jpg" alt="Darjeeling" />
 
           <div class="package-content">
             <h3>🍃 Darjeeling Package</h3>
@@ -204,8 +194,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>© 2026 TRAVEL DARJEELING | All Rights Reserved</p>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

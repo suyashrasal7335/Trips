@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Hill Station</title>
+    <title>About Us - MyTravel</title>
 
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="about">
     <!-- Navigation Bar -->
-    <nav class="navbar">
-      <h2>TRAVEL DARJEELING</h2>
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+    <div id="Nav-header">
+      <script>
+        fetch("Navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("Nav-header").innerHTML = data;
+          });
+      </script>
+    </div>
 
     <!-- About Us Section -->
     <section class="about-section">
@@ -32,12 +31,11 @@
       <div class="about-content">
         <h1>About Us</h1>
 
-        <h2>Explore the Beauty of TRAVEL DARJEELING</h2>
+        <h2>Explore the Beauty With MyTravel</h2>
 
         <p>
-          Welcome to TRAVEL DARJEELING! We are passionate about helping
-          travelers discover beautiful hill stations and enjoy unforgettable
-          travel experiences.
+          Welcome to MyTravel We are passionate about helping travelers discover
+          beautiful hill stations and enjoy unforgettable travel experiences.
         </p>
 
         <p>
@@ -88,8 +86,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>© 2026 Hill Station. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
   </body>
 </html>
