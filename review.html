@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Reviews - Trip Explorer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="review">
+    <!-- Header -->
+    <div id="Nav-header">
+      <script>
+        fetch("Navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("Nav-header").innerHTML = data;
+          });
+      </script>
+    </div>
+
+    <!-- Reviews Heading -->
+    <section class="review-heading">
+      <h1>Traveler Reviews</h1>
+      <p>See what our travelers say about their trips with us.</p>
+    </section>
+
+    <!-- Rating Summary -->
+    <section class="rating-summary">
+      <div class="rating-box">
+        <h2>4.8</h2>
+
+        <div class="stars">★ ★ ★ ★ ★</div>
+
+        <p>Based on 120+ Reviews</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <div class="review-card">
+        <div class="user">
+          <div class="user-icon">A</div>
+
+          <div>
+            <h3>Akash Patil</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <h4>Amazing Munnar Trip!</h4>
+
+        <p>
+          The trip was amazing. The tea gardens and beautiful mountains made our
+          journey unforgettable. The package was also affordable.
+        </p>
+
+        <span>📍 Munnar, Kerala</span>
+      </div>
+
+      <div class="review-card">
+        <div class="user">
+          <div class="user-icon">P</div>
+
+          <div>
+            <h3>Priya Sharma</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <h4>Beautiful Experience</h4>
+
+        <p>
+          We had a wonderful experience during our trip. Everything was well
+          planned and the places were really beautiful.
+        </p>
+
+        <span>📍 Manali, Himachal Pradesh</span>
+      </div>
+
+      <div class="review-card">
+        <div class="user">
+          <div class="user-icon">R</div>
+
+          <div>
+            <h3>Rahul More</h3>
+            <p>⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <h4>Great Trip</h4>
+
+        <p>
+          The trip was enjoyable and the hotel arrangements were good. I would
+          definitely recommend this trip to my friends.
+        </p>
+
+        <span>📍 Mahabaleshwar, Maharashtra</span>
+      </div>
+
+      <div class="review-card">
+        <div class="user">
+          <div class="user-icon">S</div>
+
+          <div>
+            <h3>Sneha Joshi</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <h4>Wonderful Vacation</h4>
+
+        <p>
+          The location was beautiful and the entire journey was comfortable. The
+          views were amazing and we enjoyed every moment.
+        </p>
+
+        <span>📍 Ooty, Tamil Nadu</span>
+      </div>
+    </section>
+
+    <!-- Write Review -->
+    <section class="write-review">
+      <h2>Write Your Review</h2>
+
+      <p>Share your travel experience with us.</p>
+
+      <form>
+        <input type="text" placeholder="Your Name" required />
+
+        <input type="email" placeholder="Your Email" required />
+
+        <select required>
+          <option value="">Select Rating</option>
+          <option>⭐⭐⭐⭐⭐ - Excellent</option>
+          <option>⭐⭐⭐⭐ - Very Good</option>
+          <option>⭐⭐⭐ - Good</option>
+          <option>⭐⭐ - Average</option>
+          <option>⭐ - Poor</option>
+        </select>
+
+        <textarea rows="5" placeholder="Write your review..." required>
+        </textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

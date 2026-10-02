@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 .home {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url("Assest/bak2.jpg");
   header {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
-      url("Assest/Darjeeling.avif");
     width: 100;
     height: 100vh;
     background-size: cover;
@@ -100,10 +100,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #43a047;
 }
 
 #Nav-nav {
+  background-color: #43a047;
   .Nav-logo {
     font-size: 2em;
     letter-spacing: 2px;
@@ -150,6 +150,7 @@
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+  height: 60px;
 }
 
 /* About section  */
@@ -790,5 +791,344 @@
     .package-container {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+/* Reviews  */
+#review {
+  .review-heading {
+    text-align: center;
+    padding: 50px 20px 25px;
+  }
+
+  .review-heading h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .review-heading p {
+    font-size: 18px;
+    color: #666;
+  }
+
+  /* Rating Summary */
+
+  .rating-summary {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px;
+  }
+
+  .rating-box {
+    text-align: center;
+    padding: 25px 60px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .rating-box h2 {
+    font-size: 45px;
+    margin: 0;
+  }
+
+  .stars {
+    font-size: 25px;
+    color: #f5b400;
+    margin: 8px 0;
+  }
+
+  /* Reviews */
+
+  .reviews {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .review-card {
+    background-color: white;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+  }
+
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .user-icon {
+    width: 50px;
+    height: 50px;
+
+    background-color: #2e8b57;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .user h3 {
+    margin: 0;
+  }
+
+  .user p {
+    margin: 5px 0;
+    color: #f5b400;
+  }
+
+  .review-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .review-card > p {
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .review-card span {
+    color: #555;
+    font-size: 14px;
+  }
+
+  /* Write Review */
+
+  .write-review {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    text-align: center;
+  }
+
+  .write-review h2 {
+    font-size: 32px;
+  }
+
+  .write-review p {
+    color: #666;
+  }
+
+  .write-review form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 25px;
+  }
+
+  .write-review input,
+  .write-review select,
+  .write-review textarea {
+    padding: 13px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+  }
+
+  .write-review textarea {
+    resize: vertical;
+  }
+
+  .write-review button {
+    padding: 13px;
+
+    background-color: #2e8b57;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+  }
+
+  .write-review button:hover {
+    background-color: #246b45;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 700px) {
+    .reviews {
+      grid-template-columns: 1fr;
+    }
+
+    .review-heading h1 {
+      font-size: 30px;
+    }
+
+    .rating-box {
+      padding: 20px 40px;
+    }
+  }
+}
+
+/* for Register */
+
+#register {
+  /* Register Section */
+
+  .register-section {
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Register Box */
+
+  .register-box {
+    width: 420px;
+
+    padding: 35px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .register-box h1 {
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    color: #2e7d32;
+  }
+
+  .register-box > p {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 25px;
+  }
+
+  /* Input */
+
+  .input-group {
+    margin-bottom: 18px;
+  }
+
+  .input-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #333;
+  }
+
+  .input-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+  }
+
+  .input-group input:focus {
+    border-color: #43a047;
+
+    box-shadow: 0 0 4px rgba(67, 160, 71, 0.4);
+  }
+
+  /* Terms */
+
+  .terms {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 15px 0;
+
+    font-size: 14px;
+
+    color: #555;
+  }
+
+  /* Register Button */
+
+  .register-box button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #43a047;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+  }
+
+  .register-box button:hover {
+    background-color: #2e7d32;
+  }
+
+  /* Login */
+
+  .login-text {
+    margin-top: 20px;
+  }
+
+  .login-text a {
+    color: #2e7d32;
+
+    font-weight: bold;
+
+    text-decoration: none;
   }
 }
